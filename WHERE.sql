@@ -39,7 +39,7 @@ AND year(dtPedido) =  '2018'
 -- COMMAND ----------
 
 SELECT * ,
-      datediff(dtEstimativaEntrega, dtAprovado)
+      datediff(dtEstimativaEntrega, dtAprovado)AS diffdataAprovadoPrevisao
 FROM silver_olist.PEDIDO
 
 WHERE descSituacao in ('shipped','canceled')
